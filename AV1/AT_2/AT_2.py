@@ -1,4 +1,3 @@
-
 def valor_calibracao(linha):
     primeiro_digito = None
     ultimo_digito = None
