@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AV1/AT_2_Carrinho/AT_2_Carrinho.iml" filepath="$PROJECT_DIR$/AV1/AT_2_Carrinho/AT_2_Carrinho.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AV1/AT_4_1_Etiqueta_Zebra/AT_4_1_Etiqueta_Zebra.iml" filepath="$PROJECT_DIR$/AV1/AT_4_1_Etiqueta_Zebra/AT_4_1_Etiqueta_Zebra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AV1/AV1.iml" filepath="$PROJECT_DIR$/AV1/AV1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AV2/AV2.iml" filepath="$PROJECT_DIR$/AV2/AV2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FC_Paradigmas_de_Linguagens_de_Programacao.iml" filepath="$PROJECT_DIR$/.idea/FC_Paradigmas_de_Linguagens_de_Programacao.iml" />
+    </modules>
+  </component>
+</project>
