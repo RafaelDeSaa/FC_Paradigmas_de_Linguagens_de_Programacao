@@ -2,6 +2,7 @@ package br.com.balanca.services;
 
 import br.com.balanca.interfaces.IBalanca;
 import br.com.balanca.models.Produto;
+
 import exceptions.ArquivoNaoEncontradoException;
 import exceptions.ExportacaoFalhaException;
 import exceptions.ProdutoFormatException;
@@ -30,7 +31,7 @@ public class FilizolaSmart implements IBalanca<Produto> {
 
     private String formatarProduto(Produto produto) {
         String codigo = String.format("%06d", produto.getCodigo());
-        String tipo = "9".equals(produto.getTipo()) ? "P" : "U"; // 9 coloquei como se fosse para o peso
+        String tipo = "9".equals(produto.getTipo()) ? "P" : "U"; 
         String descricao = String.format("%-22s", produto.getDescricao());
         String preco = String.format("%07d", (int) (produto.getValor() * 100));
 
