@@ -1,0 +1,34 @@
+Faculdade Católica da Paraíba
+Cadeira: Paradigmas de Programação
+Professor: Guilherme Estevão
+Aluno: Rafael Moreira Araújo de Sá
+
+AV2-Atividade 6: Paradigma Orientado a Função Parte 2
+------------------------------------------------------------------
+1)Função 1 - Converter Números em Letras do Alfabeto
+-Crie uma função que recebe uma lista de números inteiros (entre 1 e 26) e retorna uma string onde cada número é convertido para a letra correspondente do alfabeto. O número 1 deve ser convertido para "a", o número 2 para "b", e assim por diante até o número 26, que corresponde a "z".
+->Entrada: (numeros-para-letras '(1 2 3))
+->Saída: "abc"
+
+PS C:\Users\Rafael de Sá\Documents\kawa-latest\kawa-3.1.1\lib> java -jar kawa.jar
+#|kawa:1|# (define (numeros-para-letras numeros)
+#|.....2|# (define (numero-para-letra n)
+#|.....3|# (integer->char (+ n 96)))
+#|.....4|# (apply string (map numero-para-letra numeros)))
+#|kawa:5|# (display (numeros-para-letras '(1 2 3 4 5 6 7 8 9 10 13)))
+abcdefghijm
+#|kawa:6|#
+-------------------------------------------------------------------
+2)Função 2 - Converter Números em Notas Musicais
+-Escreva uma função que recebe uma lista de números inteiros e retorna uma lista de strings, onde cada número é convertido para uma nota musical. Considere o seguinte mapeamento:
+->Entrada: (numeros-para-notas '(1 2 3))
+->Saída: ("Do" "Re" "Mi")
+
+PS C:\Users\Rafael de Sá\Documents\kawa-latest\kawa-3.1.1\lib> java -jar kawa.jar
+#|kawa:1|# (define (numeros-para-notas numeros)
+#|.....2|# (define notas '("Do" "Re" "Mi" "Fa" "Sol" "La" "Si"))
+#|.....3|# (map (lambda (n) (list-ref notas (- n 1))) numeros))
+#|kawa:4|# (display (numeros-para-notas '(1 2 3 4 5 6)))
+(Do Re Mi Fa Sol La)
+#|kawa:5|#
+-----------------------------------------------------------------------
