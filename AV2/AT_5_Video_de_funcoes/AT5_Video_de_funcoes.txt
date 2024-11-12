@@ -1,0 +1,19 @@
+Faculdade Católica da Paraíba
+Cadeira: Paradigmas de Programação
+Professor: Guilherme Estevão
+Aluno: Rafael Moreira Araújo de Sá
+
+AV2-Atividade 5: Vídeo de funções
+------------------------------------------------------------
+1)Função 1 - Soma de Quadrados
+->Crie uma função que receba 5 parâmetros e faça a soma dos quadrados de todos os parâmetros informados.
+Ex: (soma-quadrados 1 2 3 4 5)
+->Saída esperada: 55; (ou seja, 1^2 + 2^2 + 3^2 + 4^2 + 5^2 = 55)
+
+PS C:\Users\Rafael de Sá\Documents\kawa-latest\kawa-3.1.1\lib> java -jar kawa.jar
+#|kawa:1|# (define (soma-quadrado a b c d e)
+#|.....2|# (+ (* a a) (* b b) (* c c) (* d d) (* e e)))
+#|kawa:3|# (display (soma-quadrado 1 2 3 4 5))
+55
+#|kawa:4|#
+-------------------------------------------------------------
