@@ -1,0 +1,157 @@
+Faculdade Católica da Paraíba
+Cadeira: Paradigmas de Programação
+Professor: Guilherme Estevão
+Aluno: Rafael Moreira Araújo de Sá
+
+AV2-Atividade 5: Lista de 8 Exercícios no Kawa.
+---------------------------------------------------------------------------------------------------
+1)Escreva a definição de uma função que, a partir de dois números, escreva qual é o maior?
+PS C:\Users\Rafael de Sá\Documents\kawa-latest\kawa-3.1.1\lib> java -jar kawa.jar
+#|kawa:1|# >(define maior
+#|.....2|# (lambda (x y)
+#|.....3|# (if (> x y)
+#|.....4|# x
+#|.....5|# y)))
+#<procedure >>
+#|kawa:6|# > (maior 7 5)
+#<procedure >> 7
+#|kawa:7|# > (maior 10 17)
+#<procedure >> 17
+#|kawa:8|# > (maior 25 24)
+#<procedure >> 25
+#|kawa:9|#
+-----------------------------------------------------------------------------------------------------
+2)Escreva a definição de uma função que, a partir de dois números, escreva se são ou não múltiplos?
+PS C:\Users\Rafael de Sá\Documents\kawa-latest\kawa-3.1.1\lib> java -jar kawa.jar
+#|kawa:1|# > (define sao-multiplos?
+#|.....2|# (lambda (x y)
+#|.....3|# (if (or (= 0 (remainder y x)) (= 0 (remainder x y)))
+#|.....4|#  (display "Sao multiplos.")
+#|.....5|# (display "Nao sao multiplos."))))
+#<procedure >>
+#|kawa:6|# > (sao-multiplos? 12 2)
+#<procedure >>Sao multiplos.
+#|kawa:7|# > (sao-multiplos? 3 7)
+#<procedure >>Nao sao multiplos.
+#|kawa:8|#
+------------------------------------------------------------------------------------------------------
+3)Escreva a definição de funções que, a partir de um parâmetro representando a o tempo necessário para fabricar um produto expresso em segundos, mostre o expresso em horas, minutos e segundos (dica: utilize as primitivas quotient para extrair a parte inteira de uma divisão e remainder para extrair o resto da divisão).
+PS C:\Users\Rafael de Sá\Documents\kawa-latest\kawa-3.1.1\lib> java -jar kawa.jar
+#|kawa:1|# > (define tempo-em-hms
+#|.....2|# (lambda (segundos)
+#|.....3|# (define horas (quotient segundos 3600))
+#|.....4|# (define minutos (quotient (remainder segundos 3600) 60))
+#|.....5|# (define segundos-restantes (remainder segundos 60))
+#|.....6|# (display horas)
+#|.....7|# (display " horas, ")
+#|.....8|# (display minutos)
+#|.....9|# (display " minutos e ")
+#|....10|# (display segundos-restantes)
+#|....11|# (display " segundos.")))
+#<procedure >>
+#|kawa:12|# > (tempo-em-hms 3661)
+#<procedure >> 1 horas, 1 minutos e 1 segundos.
+#|kawa:13|# > (tempo-em-hms 8384)
+#<procedure >> 2 horas, 19 minutos e 44 segundos.
+#|kawa:14|# > (tempo-em-hms 13071994)
+#<procedure >> 3631 horas, 6 minutos e 34 segundos.
+#|kawa:15|#
+-------------------------------------------------------------------------------------------------------
+4)Escreva a definição de uma função que conte, a partir do número informado como parâmetro, até chegar a zero. Enquanto não chegar a zero, mostrar o número correspondente. Quando a contagem chegar a zero, mostrar a mensagem “Encerrado”.
+PS C:\Users\Rafael de Sá\Documents\kawa-latest\kawa-3.1.1\lib> java -jar kawa.jar
+#|kawa:1|# > (define contar-ate-zero
+#|.....2|# (lambda (n)
+#|.....3|# (if (= n 0)
+#|.....4|# (begin
+#|.....5|# (display "Encerrado")
+#|.....6|# (newline))
+#|.....7|# (begin
+#|.....8|# (display n)
+#|.....9|# (newline)
+#|....10|# (contar-ate-zero (- n 1)))))
+#|....11|#
+#|....12|# > (contar-ate-zero 5)
+#|....13|# 5
+#|....14|# 4
+#|....15|# 3
+#|....16|# 2
+#|....17|# 1
+#|....18|# Encerrado
+#|....19|#
+--------------------------------------------------------------------------------------------------------
+5)Escreva a definição de funções que, a partir de um parâmetro representando a idade de uma pessoa expressa em dias, mostre-a expressa em anos, meses e dias (dica: utilize as primitivas quotient para extrair a parte inteira de uma divisão e remainder para extrair o resto da divisão).
+PS C:\Users\Rafael de Sá\Documents\kawa-latest\kawa-3.1.1\lib> java -jar kawa.jar
+#|kawa:1|# > (define idade-em-ano-mes-dia
+#|.....2|# (lambda (dias)
+#|.....3|# (define anos (quotient dias 365))
+#|.....4|# (define dias-restantes (remainder dias 365))
+#|.....5|# (define meses (quotient dias-restantes 30))
+#|.....6|# (define dias-finais (remainder dias-restantes 30))
+#|.....7|# (display anos)
+#|.....8|# (display " anos, ")
+#|.....9|# (display meses)
+#|....10|# (display " meses e ")
+#|....11|# (display dias-finais)
+#|....12|# (display " dias.")))
+#<procedure >>
+#|kawa:13|# > (idade-em-ano-mes-dia 10000)
+#<procedure >> 27 anos, 4 meses e 25 dias.
+#|kawa:14|#
+---------------------------------------------------------------------------------------------------------
+6)Escreva a definição de uma função que, a partir de três parâmetros (dois números e um caracter representando a operação aritmética desejada + - * /) calcula o resultado da operação aritmética (dica: utilize a primitiva cond).
+PS C:\Users\Rafael de Sá\Documents\kawa-latest\kawa-3.1.1\lib> java -jar kawa.jar
+#|kawa:1|# (define calcular
+#|.....2|# (lambda (num1 num2 operacao)
+#|.....3|# (cond
+#|.....4|# [(= operacao '+) (+ num1 num2)]
+#|.....5|# [(= operacao '-) (- num1 num2)]
+#|.....6|# [(= operacao '*) (* num1 num2)]
+#|.....7|# [(= operacao '/)
+#|.....8|# (if (= num2 0)
+#|.....9|# "Erro: Divisao por zero"
+#|....10|# (/ num1 num2))]
+#|....11|# [else "Operacao invalida"])))
+#|kawa:12|#
+#|kawa:13|# (calcular 10 5 '+)
+#<procedure >> 15
+#|kawa:14|# (calcular 10 5 '-)
+#<procedure >> 5
+#|kawa:15|# (calcular 10 5 '*)
+#<procedure >>50
+#|kawa:16|# (calcular 10 5 '/)
+#<procedure >> 2
+#|kawa:17|#(calcular 10 0 '/)
+#<procedure >> Erro: Divisão por zero
+#|kawa:18|#(calcular 10 5 '^)
+#<procedure >> Operacao invalida
+------------------------------------------------------------------------------------------------------------
+7)Escreva a definição de uma função que, a partir de um parâmetro numérico representando o salário bruto de uma pessoa, calcule o valor a ser pago referente ao INSS, de acordo com as seguintes faixas de valores: até R$1200,00 2% do salário bruto, acima de R$1200,00 até R$2500,00 5% do salário bruto e acim de R$2500,00 8% do salário bruto (dica: utilize a primitiva cond).
+PS C:\Users\Rafael de Sá\Documents\kawa-latest\kawa-3.1.1\lib> java -jar kawa.jar
+#|kawa:1|# (define calcular-INSS
+#|.....2|# (lambda (salario-bruto)
+#|.....3|# (cond
+#|.....4|# [(<= salario-bruto 1200) (* salario-bruto 0.02)]
+#|.....5|# [(<= salario-bruto 2500) (* salario-bruto 0.05)]
+#|.....6|# [else (* salario-bruto 0.08)])))
+#|kawa:7|# (calcular-INSS 1000)
+20.0
+#|kawa:8|# (calcular-INSS 2000)
+40.0
+#|kawa:9|# (calcular-INSS 3000)
+60.0
+#|kawa:10|#
+--------------------------------------------------------------------------------------------------------------
+8)Escreva a definição de uma função que calcule o fatorial de um número.
+PS C:\Users\Rafael de Sá\Documents\kawa-latest\kawa-3.1.1\lib> java -jar kawa.jar
+#|kawa:1|# (define fatorial
+#|.....2|# (lambda (n)
+#|.....3|# (if (= n 0)
+#|.....4|# 1
+#|.....5|# (* n (fatorial (- n 1))))))
+#|kawa:6|# (fatorial 5)
+120
+#|kawa:7|# (fatorial 0)
+1
+#|kawa:8|# (fatorial 7)
+5040
+#|kawa:9|#
