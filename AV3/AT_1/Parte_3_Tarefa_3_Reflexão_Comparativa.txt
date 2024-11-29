@@ -1,0 +1,33 @@
+Com base nas implementações realizadas, responda às seguintes questões:
+(1)Comparação de código
+ -Qual paradigma resultou em um código mais conciso e fácil de entender?
+ -Qual paradigma foi mais fácil de implementar para você? Justifique.
+ R=> Paradigma funcional, resultou em um código mais conciso, mas com maior dificuldade de compreensão
+ inicial para quem não é familiarizado com ele.
+
+(2)Abordagem do problema
+ -Como o paradigma estruturado aborda a solução dessas tarefas? Compare com a abordagem funcional.
+ R=>Paradigma Estruturado (Imperativo): A solução é clara e explícita, com um foco no controle de fluxo
+ e manipulação do estado. Ele é adequado quando se quer um processo passo a passo, e pode ser mais fácil 
+ de entender para quem não está familiarizado com conceitos mais avançados.
+
+ =Comparação com a abordagem funcional=
+  (Como a tarefa é abordada)
+   "Paradigma Estruturado"
+   Descreve como o problema é resolvido, passo a passo, utilizando loops e controle explícito de estado.
+   
+   "Paradigma Funcional"
+   Descreve o que deve ser feito, usando funções para manipulação de dados sem alteração de estado.
+
+  (Fluxo de controle)
+  "Paradigma Estruturado"
+  Fluxo sequencial, utilizando loops, manipulação explícita de variáveis.
+
+  "Paradigma Funcional"
+  Usa funções de ordem superior, onde descreve o processo de forma declarativa.
+
+(3)Manutenibilidade
+  -Se fosse necessário alterar a funcionalidade para trabalhar com números negativos, qual código seria mais fácil de modificar? Por quê?
+ Quando se pensa em manutenibilidade de um código, a facilidade de fazer alterações no comportamento do sistema, como adaptar o código para
+ lidar com números negativos, deve ser um dos principais critérios. Vamos analisar como seria a modificação do código fornecido para lidar
+ com números negativos, considerando tanto a abordagem estruturada (imperativa) quanto a funcional.
