@@ -1,11 +1,31 @@
 (1º)Explique brevemente o paradigma estruturado. Quais são suas principais
 características?
 
-->Paradigma estruturado é um tipo de programação que tem uma estrutura lógica clara,
-nela tem a finalidade de controle de fluxo atraves  de sequências, decissões e repetições. Nesse
-tipo de paradigma vem em busca de dividir os problemas em subproblemas, facilitando a solução do problema.
-Suas principais características são: modularidade, estado mutável e controle de fluxo explícito.
+ ->Paradigma estruturado é um tipo de programação que tem uma estrutura lógica clara,
+ nela tem a finalidade de controle de fluxo atraves  de sequências, decissões e repetições. Nesse
+ tipo de paradigma vem em busca de dividir os problemas em subproblemas, facilitando a solução do problema.
+ Suas principais características são: modularidade, estado mutável e controle de fluxo explícito.
 
 (2º)Explique brevemente o paradigma funcional. Quais são suas principais características?
 
-->Paradigma
+ ->Paradigma funcional já é um tipo de programação com bases em funções matemáticas e também em imutabilidade
+ nos dados, nesse tipo de paradigma tem como objetivo  na transformação  de dados  e na não manipulação de seus dados,
+ com isso ele utiliza funções como primeira classe, classes essas como funções que podem ser  passados  como parâmetros,
+ retornando de outras funções armazenadas em váriaveis.Suas principais características são: Ausência de efeitos colaterais,
+ cidadões de primeiras classe e a imutabilidade.
+
+(3º)Liste três vantagens e três desvantagens de cada paradigma em relação ao outro.
+
+ ->Paradigma Estruturado:
+
+  (Vantagens)
+   -Muito bem utilizado em ambientes  que tem solicitação  de alteração constante como por exemplo sistemas controle e automação.
+   -Ele vem com eficiência em solucionar os problemas que tenha a manipulação sequencial dos dados com processamento  de arquivos  e organizações em lista
+   -A estrutura desse paradigma é bem intuitiva, com os comandos e controles claros, para que o fluxo do programa seja de fácil compreenção.
+
+  (Desvantagens)
+  -O paradigma estruturado tem como desvantagem a dificuldade em se desenvolver em grandes sistemas, pois de acordo com o que o programa em si cressa,
+ o código pode ficar mais difícil de ser gerenciado, principalmente em sistemas que tem mudanças de estado e muitas interações.
+  -Outra desvantagem é a reutilização de códigos que são baixas, porque a modularização por meio de funções vão ser menos flexiveis,dificultando  a reutilização do código.
+  -Por utilizar um sistema que tenha paradigma estruturado ele pode ter proporção a erros de estado, pois como ele é multavel, pode ser difícil rastrear e carrigir seus erros
+ que vão surgindo devido as mudanças no estado. 
