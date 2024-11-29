@@ -1,0 +1,11 @@
+(1º)Explique brevemente o paradigma estruturado. Quais são suas principais
+características?
+
+->Paradigma estruturado é um tipo de programação que tem uma estrutura lógica clara,
+nela tem a finalidade de controle de fluxo atraves  de sequências, decissões e repetições. Nesse
+tipo de paradigma vem em busca de dividir os problemas em subproblemas, facilitando a solução do problema.
+Suas principais características são: modularidade, estado mutável e controle de fluxo explícito.
+
+(2º)Explique brevemente o paradigma funcional. Quais são suas principais características?
+
+->Paradigma
