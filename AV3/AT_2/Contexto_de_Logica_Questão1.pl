@@ -12,7 +12,7 @@ gosta(gato, peixes).
 gosta(gato, passaros).
 gosta(gato, pessoas).
 
-come(X, Y):-
+come(X, Y) :-
 gosta(X, Y),
-not(((X = gatos, Y = pessoas))).
+not((X = gato, Y = pessoas)).
 
