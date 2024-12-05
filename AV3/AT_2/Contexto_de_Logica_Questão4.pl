@@ -1,18 +1,25 @@
-mora(joao, centro).
-mora(maria, centro).
-mora(ana, jardim).
-mora(carlos, jardim).
-mora(paulo, vila_nova).
-mora(fernanda, vila_nova).
+mora(joao, copacabana).
+mora(maria, ipanema).
+mora(pedro, leblon).
+mora(ana, botafogo).
+mora(carla, copacabana).
+mora(luiz, tijuca).
+mora(fernanda, tijuca).
 
-pertence(centro, norte).
-pertence(jardim, norte).
-pertence(vila_nova, sul).
+pertence(copacabana, zona_sul).
+pertence(ipanema, zona_sul).
+pertence(leblon, zona_sul).
+pertence(botafogo, zona_sul).
+pertence(tijuca, zona_norte).
 
-amigo(joao, maria).
-amigo(ana, carlos).
-amigo(paulo, fernanda).
+amigo(joao, carla).
+amigo(maria, pedro).
+amigo(ana, joao).
+amigo(luiz, fernanda).
 
+tem_carro(joao).
+tem_carro(ana).
+tem_carro(luiz).
 tem_carro(joao).
 tem_carro(carlos).
 tem_carro(paulo).
