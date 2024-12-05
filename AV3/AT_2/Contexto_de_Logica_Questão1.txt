@@ -1,0 +1,6 @@
+cachorro(doky).
+gato(garfield).
+peixe(nemo).
+passaro(dudu).
+pessoa(joao, maria).
+funcionario(carlos,uri).
